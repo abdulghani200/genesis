@@ -6,21 +6,23 @@
   <title>GENESIS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="{{ url_for('static',filename='plugins/bootstrap/dist/css/bootstrap.min.css') }}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='plugins/font-awesome/css/font-awesome.min.css') }}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='plugins/Ionicons/css/ionicons.min.css') }}">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='plugins/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='dist/css/AdminLTE.css') }}">
   
-  <link rel="stylesheet" href="dist/css/skins/skin-black.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='dist/css/skins/skin-black.css') }}">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <!--custom css-->
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='custom.css') }}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,13 +68,13 @@
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">Alexander Pierce</span>
               <!-- The user image in the navbar-->
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="{{ url_for('static',filename='dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
               
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{ url_for('static',filename='dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -150,14 +152,14 @@
       <ul class="sidebar-menu" data-widget="tree">
         
         <!-- Optionally, you can add icons to the links -->
+
         
-        
-        <li class="active"><a href="#"><img src="dist/img/monitor.svg" class="genesisIcons"> <span>Dashboard</span></a></li>
-        <li><a href="#"><img src="dist/img/bar-chart.svg" class="genesisIcons"> <span>Analytics</span></a></li>
-        <li><a href="#"><img src="dist/img/network.svg" class="genesisIcons"> <span>Paid Marketing</span></a></li>
-        <li><a href="#"><img src="dist/img/analysis.svg" class="genesisIcons"> <span>SEO</span></a></li>
-        <li><a href="#"><img src="dist/img/content.svg" class="genesisIcons"> <span>Content</span></a></li>
-        <li><a href="#"><img src="dist/img/ninja.svg" class="genesisIcons"> <span>Nerd Ninja</span></a></li>
+        <li class="active"><a href="#"><img src="{{ url_for('static',filename='dist/img/monitor.svg') }}" class="genesisIcons"> <span>Dashboard</span></a></li>
+        <li><a href="#"><img src="{{ url_for('static',filename='dist/img/bar-chart.svg') }}" class="genesisIcons"> <span>Analytics</span></a></li>
+        <li><a href="#"><img src="{{ url_for('static',filename='dist/img/network.svg') }}" class="genesisIcons"> <span>Paid Marketing</span></a></li>
+        <li><a href="#"><img src="{{ url_for('static',filename='dist/img/analysis.svg') }}" class="genesisIcons"> <span>SEO</span></a></li>
+        <li><a href="#"><img src="{{ url_for('static',filename='dist/img/content.svg') }}" class="genesisIcons"> <span>Content</span></a></li>
+        <li><a href="#"><img src="{{ url_for('static',filename='dist/img/ninja.svg') }}" class="genesisIcons"> <span>Nerd Ninja</span></a></li>
 
         <li class="settingsButtonDownLeft">
             <a href="#"><i class="fa fa-gears genesisIcons"></i><span>Settings</span></a>
@@ -618,21 +620,21 @@
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
-<script src="plugins/jquery/dist/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='plugins/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
 <!-- DataTables -->
-<script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='plugins/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
 <!-- ChartJS -->
-<script src="plugins/chart.js/Chart.js"></script>
+<script src="{{ url_for('static', filename='plugins/chart.js/Chart.js') }}"></script>
 
-<script src="customCharts.js"></script>
+<script src="{{ url_for('static', filename='customCharts.js') }}"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js') }}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js') }}"></script>
 
 
 <script>
